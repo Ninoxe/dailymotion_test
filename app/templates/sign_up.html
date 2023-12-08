@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Import materialize.css-->
+    <link href="{{ url_for('static', path='/css/materialize.min.css') }}" rel="stylesheet" type="text/css"
+        media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dailymotion Test</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s8 offset-s2 card-panel">
+                <div class="center">
+                    <h4>Sign up</h4>
+                </div>
+                <form method="POST">
+                    <div class="row">
+                        <div class="input-field col s6 offset-s3">
+                            <input placeholder="example@email.com" id="user_email" name="user_email" type="text"
+                                class="validate">
+                            <label for="user_email">Email</label>
+                            <div>{{user_email_error}}</div>
+                        </div>
+                        <div class="input-field col s6 offset-s3">
+                            <input id="password" name="password" type="password" class="validate">
+                            <label for="password">Password</label>
+                            <div>{{password_error}}</div>
+                        </div>
+                        <div class="col s12 center">
+                            <button class="btn waves-effect waves-light" type="submit">Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', path='/js/materialize.min.js') }}"></script>
+</body>
+
+</html>
